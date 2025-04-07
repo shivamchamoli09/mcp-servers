@@ -21,6 +21,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   console.log(`Processing prompt: ${args.prompt}`);
   
   try {
+    // Make a request to the Llama API OR any other AI API eg. OpenAI
     const response = await fetch("http://localhost:11434/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
